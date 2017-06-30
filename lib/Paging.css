@@ -1,3 +1,9 @@
-body{
-    font-size: 20px !important;
+.pagination li {
+    display: inline;
+}
+
+.pagination li a, .pagination li span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
 }
