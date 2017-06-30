@@ -1,8 +1,7 @@
 {
-  "name": "create-react-app-publish",
+  "name": "reactjs-paging",
   "main": "lib/Paging.js",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.3",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
