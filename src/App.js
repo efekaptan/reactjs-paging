@@ -17,6 +17,7 @@ class App extends Component {
     this.setState({
       pageIndex: pageIndex
     });
+    console.log(`You clicked ${pageIndex}`);
   }
 
   render() {
