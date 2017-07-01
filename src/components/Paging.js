@@ -23,37 +23,37 @@ const Paging = ({ pageIndex = 1, groupSize = 10, navSize = 1, totalCount, pageSi
         for (let i = 1; i <= groupSize; i++) {
             pages.push(i);
         }
-        GetLastPages();
+        LoadLastPages();
     }
     //Current page is in last group Ex : 1,2 .. 5,6,7,8,9
     else if (currentPage - 1 >= totalPages - groupSize + 1) {
-        GetFirstPages();
+        LoadFirstPages();
 
         for (let i = totalPages - groupSize + 1; i <= totalPages; i++) {
             pages.push(i);
         }
     }
-    //For middle group, display pages Ex : 1,2 .. 4,5,6,7,8 .. 11,12
+    //Display pages for middle group Ex : 1,2 .. 4,5,6,7,8 .. 11,12
     else {
-        GetFirstPages();
+        LoadFirstPages();
 
-        //Center calculated to distrubute equal size of pages around middle page
+        //Calculate center to distrubute equal size of pages around middle page
         const center = Math.ceil((groupSize - 1) / 2);
 
         for (let i = currentPage - center; i <= currentPage + center; i++) {
             pages.push(i);
         }
-        GetLastPages();
+        LoadLastPages();
     }
 
-    function GetFirstPages() {
+    function LoadFirstPages() {
         for (let i = 1; i <= navSize; i++) {
             pages.push(i);
         }
         pages.push('');
     }
 
-    function GetLastPages() {
+    function LoadLastPages() {
         pages.push('');
         for (let i = totalPages - navSize + 1; i <= totalPages; i++) {
             pages.push(i);
