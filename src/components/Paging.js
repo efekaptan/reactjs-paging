@@ -87,7 +87,7 @@ class Paging extends React.Component {
                         else {
                             const isCurrentPage = parseInt(this.props.pageIndex, 10) === page;
 
-                            return <li key={index} className={isCurrentPage ? 'active' : null}>
+                            return <li key={index} className={'page-item' + (isCurrentPage ? ' active' : null)}>
                                 <a style={{ cursor: "pointer" }} onClick={() => this.props.onClick(page)}>
                                     {page}
                                 </a>
